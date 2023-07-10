@@ -26,8 +26,11 @@ npm install
 Create a `.env` file in the project root with the following content:
 
 CLUSTER_CONN_STR=couchbase://localhost
+
 COUCHBASE_USERNAME=admin
+
 COUCHBASE_PASSWORD=monpetitgazon
+
 COUCHBASE_BUCKET_NAME=mpg
 
 
