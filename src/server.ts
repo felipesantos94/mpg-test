@@ -18,8 +18,8 @@ app.use('/api/mpg', mpgRoutes);
 
 async function startServer(): Promise<void> {
   await CouchbaseService.initialize();
-  UserDao.initialize();
-  MpgDao.initialize();
+  await UserDao.initialize();
+  await MpgDao.initialize();
 
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

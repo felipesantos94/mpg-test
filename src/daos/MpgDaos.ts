@@ -9,7 +9,7 @@ const bucketName = process.env.COUCHBASE_BUCKET_NAME || '';
 export class MpgDao {
   private static cluster: Cluster;
 
-  public static initialize(): void {
+  public static async initialize(): Promise<void> {
     this.cluster = CouchbaseService.getCluster();
   }
 
