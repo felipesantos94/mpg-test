@@ -26,12 +26,15 @@ npm install
 Create a `.env` file in the project root with the following content:
 
 CLUSTER_CONN_STR=couchbase://localhost
+
 COUCHBASE_USERNAME=admin
+
 COUCHBASE_PASSWORD=monpetitgazon
+
 COUCHBASE_BUCKET_NAME=mpg
 
 
-!!`OBS: The runtime and db versions used in this project were Node.js v20.2.0 and Couchbase Server 7.2.0 community edition.`!!
+`OBS: The runtime and db versions used in this project were Node.js v20.2.0 and Couchbase Server 7.2.0 community edition.`
 
 ## Usage
 
@@ -44,7 +47,7 @@ Access the application routes at `http://localhost:3000` via Postman or similar.
 
 ## API Endpoints
 
-- `GET /api/users/:leagueId`: Get a list of all users related to a MPG League ID.
+- `GET /api/users/:leagueId`: Get a list of all users related to an MPG League ID.
   - Response: JSON { users: [<Users array, if any>]}
 
 - `POST /api/mpg/add`: Create a new MPG League.
@@ -54,13 +57,13 @@ Access the application routes at `http://localhost:3000` via Postman or similar.
   - Response: JSON { message: 'MPG team updated successfully' }
 
 - `Data validation middleware - Joi`:
-The creation of a validation middleware was made to showcase my expertize in encapsuling business logic to be performed at any point of the HTTP request lifecycle. I considered implementing `Joi` package to validate body requests with the defined schema models to be used as a middleware, and my main reasons to do so were:
+The creation of a validation middleware was made to showcase my knowledge in encapsulating business logic to be performed at any point of the HTTP request lifecycle. I considered implementing the `Joi` package to validate body requests with the defined schema models to be used as middleware, and my main reasons to do so were:
 
-- Ensure data integrity: Validate that the incoming data adheres to the defined schema and constraints, preventing invalid or inconsistent data from being processed and stored.
+- Validate data integrity: Ensure incoming data conforms to the defined schema and constraints, maintaining the integrity and consistency of stored data.
 
-- Improve security: Validate the data to mitigate potential security vulnerabilities such as SQL injection, cross-site scripting (XSS), or other forms of attacks that can exploit malformed or malicious data.
+- Ensure security: Validate data to mitigate security risks like SQL injection, cross-site scripting (XSS), and other potential attacks that exploit malformed or malicious data.
 
-- Enhance user experience: By validating the data upfront, you can provide immediate feedback to the client if the request payload is invalid, helping the user correct any errors and reducing unnecessary server-side processing.
+- Improve user experience: By validating data upfront, provide immediate feedback to clients about invalid request payloads, enabling users to correct errors promptly and reducing unnecessary server-side processing.
 
 ## Authors
 
