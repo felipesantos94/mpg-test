@@ -31,7 +31,7 @@ COUCHBASE_PASSWORD=monpetitgazon
 COUCHBASE_BUCKET_NAME=mpg
 
 
-!!`OBS: The runtime and db versions used in this project were Node.js v20.2.0 and Couchbase Server 7.2.0 community edition.`!!
+`OBS: The runtime and db versions used in this project were Node.js v20.2.0 and Couchbase Server 7.2.0 community edition.`
 
 ## Usage
 
